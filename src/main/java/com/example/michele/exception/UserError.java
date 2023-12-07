@@ -11,7 +11,7 @@ public class UserError extends RuntimeException{
     UserRepository userRepository;
 
 
-    public void UserDataExceprion(UserTO userTO){
+    public void UserDataException(UserTO userTO){
         if (userTO.getName() == null){
             throw new Error("Inserire nome utente!");
         }

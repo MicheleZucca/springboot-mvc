@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfi
 import org.springframework.context.annotation.ComponentScan;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
-@SpringBootApplication(scanBasePackages = "com.example.michele.*", exclude = {SecurityAutoConfiguration.class})
+@SpringBootApplication(exclude = {SecurityAutoConfiguration.class})
 @EnableSwagger2
 @ComponentScan("com.example.michele")
 public class SpringbootMVC {
@@ -14,5 +14,4 @@ public class SpringbootMVC {
 	public static void main(String[] args) {
 		SpringApplication.run(SpringbootMVC.class, args);
 	}
-
 }

@@ -14,7 +14,8 @@ public interface BookingRepository extends JpaRepository<Booking, Long> {
             "from Booking b, Apartment a, User u ")
     List<BookingRTO> getAllBooking();
 
-    @Query("select b from Booking b " +
-            "where b.checkoutDate is not null")
-    List<BookingRTO> getAllWithoutCheckout();
+    @Query("select b " +
+            "from Booking b " +
+            "where b.checkoutDate is null")
+    List<Booking> getAllWithoutCheckout();
 }

@@ -59,6 +59,18 @@
 			<version>1.18.22</version> <!-- Use the latest version available -->
 			<scope>provided</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.mapstruct</groupId>
+			<artifactId>mapstruct</artifactId>
+			<version>1.4.2.Final</version> <!-- The version number may vary -->
+		</dependency>
+		<dependency>
+			<groupId>org.mapstruct</groupId>
+			<artifactId>mapstruct-processor</artifactId>
+			<version>1.4.2.Final</version> <!-- The version number may vary -->
+			<scope>provided</scope>
+		</dependency>
+
 
 	</dependencies>
 	<build>
