@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <changeSet id="create_table_booking" author="liquibase">
+        <createTable tableName="booking_entity">
+            <!-- Columns for the 'booking_entity' table -->
+            <column name="ID" type="BIGSERIAL">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="BOOKING_PK"/>
+            </column>
+            <column name="apartment" type="BIGSERIAL">
+                <constraints nullable="false"/>
+            </column>
+            <column name="user_id" type="BIGSERIAL">
+                <constraints nullable="false"/>
+            </column>
+            <column name="checkin" type="DATE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="checkout" type="DATE">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <!-- ChangeSet for adding foreign key constraint on 'booking_entity' referencing 'apartment_entity' -->
+    <changeSet id="add_foreign_key_apartment" author="liquibase">
+        <addForeignKeyConstraint baseTableName="booking_entity"
+                                 baseColumnNames="apartment"
+                                 constraintName="FK_apartment_entity"
+                                 referencedTableName="apartment_entity"
+                                 referencedColumnNames="ID"/>
+    </changeSet>
+
+    <!-- ChangeSet for adding foreign key constraint on 'booking_entity' referencing 'user_entity' -->
+    <changeSet id="add_foreign_key_user" author="liquibase">
+        <addForeignKeyConstraint baseTableName="booking_entity"
+                                 baseColumnNames="user_id"
+                                 constraintName="FK_user_entity"
+                                 referencedTableName="user_entity"
+                                 referencedColumnNames="ID"/>
+    </changeSet>
+</databaseChangeLog>

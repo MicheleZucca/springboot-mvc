@@ -12,15 +12,19 @@ import javax.persistence.*;
 @Getter
 @Setter
 @Entity
-@Table(name = "car_entity")
-public class Car {
+@Table(name = "apartment_entity")
+public class Apartment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(name = "name")
+    private String name;
+    @Column(name = "city")
+    private String city;
+    @Column(name = "house_number")
+    private Integer houseNumber;
+    @Column(name = "street_name")
+    private String streetName;
 
-    @Column(name = "targa")
-    private String targa;
-    @Column(name = "model")
-    private String model;
 
 }

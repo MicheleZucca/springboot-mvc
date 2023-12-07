@@ -9,7 +9,9 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class CarTO {
-    private String targa;
-    private String model;
+public class ApartmentTO {
+    private String name;
+    private String city;
+    private Integer houseNumber;
+    private String streetName;
 }

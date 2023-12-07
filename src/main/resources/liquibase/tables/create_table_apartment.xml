@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+     <changeSet id="create_table_apartement" author="liquibase">
+            <createTable tableName="apartment_entity">
+                <!-- Columns for the 'apartment_entity' table -->
+                <column name="ID" type="BIGSERIAL">
+                    <constraints nullable="false" primaryKey="true" primaryKeyName="APARTMENT_PK"/>
+                </column>
+                <column name="name" type="VARCHAR(20 BYTE)">
+                    <constraints nullable="false"/>
+                </column>
+                <column name="city" type="VARCHAR(30 BYTE)">
+                    <constraints nullable="false"/>
+                </column>
+                <column name="house_number" type="INTEGER">
+                    <constraints nullable="false"/>
+                </column>
+                <column name="street_name" type="VARCHAR(50 BYTE)">
+                    <constraints nullable="false"/>
+                </column>
+            </createTable>
+        </changeSet>
+
+</databaseChangeLog>

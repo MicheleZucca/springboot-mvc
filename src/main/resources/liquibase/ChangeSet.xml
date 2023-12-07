@@ -6,5 +6,6 @@
 
 
    <include file="tables/create_table_user.xml" relativeToChangelogFile="true" />
-   <include file="tables/create_table_car.xml" relativeToChangelogFile="true" />
+   <include file="tables/create_table_apartment.xml" relativeToChangelogFile="true" />
+   <include file="tables/create_table_booking.xml" relativeToChangelogFile="true" />
 </databaseChangeLog>

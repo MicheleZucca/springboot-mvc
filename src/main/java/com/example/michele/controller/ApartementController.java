@@ -1,7 +1,7 @@
 package com.example.michele.controller;
 
-import com.example.michele.DTO.TO.CarTO;
-import com.example.michele.Service.CarService;
+import com.example.michele.DTO.TO.ApartmentTO;
+import com.example.michele.Service.ApartmentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -11,14 +11,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/cars")
-public class CarController {
+@RequestMapping("/apartemnt")
+public class ApartementController {
 
     @Autowired
-    CarService carService;
+    ApartmentService apartmentService;
 
-    @PostMapping(path = "/create-new-car")
-    public ResponseEntity<Long> createNewCar(@RequestBody CarTO carTO){
-        return new ResponseEntity<>(carService.newCar(carTO), HttpStatus.OK);
+    @PostMapping(path = "/add-new-apartment")
+    public ResponseEntity<Long> addNewApartemtn(@RequestBody ApartmentTO apartmentTO){
+        return new ResponseEntity<>(apartmentService.addAparment(apartmentTO), HttpStatus.OK);
     }
 }
